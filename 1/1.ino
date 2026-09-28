@@ -57,19 +57,20 @@ void loop() {
   Serial.println(armed);
   if (armed) 
   {                         // 히스테리시스
-    
     if (!alarming && v < threshold - 50)
     { 
         alarming = true;  
         tone(D9, 1000);
           
         digitalWrite(D9, HIGH);  
+        Serial.println("start");
     }
     if ( alarming && v > threshold + 50) 
     { 
         alarming = false; 
         noTone(D9);
         digitalWrite(D9, LOW);  
+        Serial.println("end");
     }
   }
   delay(50);
