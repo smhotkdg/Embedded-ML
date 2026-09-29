@@ -1,6 +1,6 @@
 void setup()
 {
-
+    pindMode(D13,OUTPU);
 }
 void loop()
 {
