@@ -1,11 +1,14 @@
-void setup()
+void setup() 
 {
-    pindMode(D13,OUTPU);
-}
-void loop()
+  Serial.begin(9600);
+  pinMode(D7, INPUT);        // 모듈이 직접 밀어 주므로
+}                            // 풀업은 필요 없습니다
+void loop() 
 {
-  
+  Serial.println(digitalRead(D7));
+  delay(200);
 }
+
 
 //디버깅 테스트
 // int number =0;
