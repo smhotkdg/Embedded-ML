@@ -1,3 +1,12 @@
+void setup()
+{
+
+}
+void loop()
+{
+  
+}
+
 //디버깅 테스트
 // int number =0;
 
