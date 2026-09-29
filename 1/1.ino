@@ -1,12 +1,14 @@
 void setup() 
 {
   Serial.begin(9600);
-  pinMode(D7, INPUT);        // 모듈이 직접 밀어 주므로
 }                            // 풀업은 필요 없습니다
 void loop() 
 {
-  Serial.println(digitalRead(D7));
-  delay(200);
+    int v = analogRead(A0);
+    float volt = v * 3.3 / 1023.0;
+    Serial.print(v);
+    Serial.print("  ");
+    Serial.println(volt, 2);   // 소수 2자리
 }
 
 
