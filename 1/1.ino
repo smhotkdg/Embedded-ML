@@ -25,8 +25,14 @@ void loop()
   if(armed)
   {
     int v = analogRead(A0);
-    Serial.println(v);
-    Serial.println(armed);
+    if(v > 500)
+    {
+      //여기는 어두운 곳
+    }
+    else
+    {
+      //여기는 밝은 곳
+    }
   }
 }
 
