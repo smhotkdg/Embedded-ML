@@ -48,7 +48,6 @@ void setup()
   pinMode(D6, INPUT_PULLUP);    // 반응 버튼
   pinMode(D9, OUTPUT);          // 부저
   pinMode(D13, OUTPUT);         // 보드 LED
-  pinMode(D12, OUTPUT);         // 스코프 마커
   randomSeed(analogRead(A0));
   Serial.println("D4 를 누르면 시작!");
 }
@@ -80,7 +79,6 @@ void loop()
       else if (millis() - t0 > waitMs)
       {
         tone(D9, 2000);
-        digitalWrite(D12, HIGH);   
         goTime = millis();
         st = GO;
       }
@@ -90,7 +88,6 @@ void loop()
       if (hit6)                 // D6 = 정답
       {
         noTone(D9);
-        digitalWrite(D12, LOW);    
         digitalWrite(D13, LOW);
         Serial.print("반응시간 ms: ");
         Serial.println(millis() - goTime);
