@@ -3,9 +3,10 @@ const int SW1 = D2;
 const int SW2 = D3;
 const int LED = LED_BUILTIN; // LD2
 
-float w1 = 1.0;
-float w2 = 1.0;
-float b = -1.5;
+//XOR
+float w1 = -1.0;
+float w2 = -1.0;
+float b = 1.5;
 
 int perceptron(int x1, int x2)
 {
